@@ -1,0 +1,20 @@
+server:
+  port: 8004
+
+spring:
+  main:
+    banner-mode: 'off'
+  profiles.active: dev
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+      name: accountservice
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+    registerWithEureka: true
+
